@@ -36,6 +36,7 @@ public class Main {
                     adotarAnimal(scanner, abrigo);
                     break;
                 case 4:
+                    limparTela();
                     System.out.println("\nObrigado por ter nos visitado, até logo!");
                     System.out.println("\nSaindo...");
                     scanner.close();
@@ -43,8 +44,10 @@ public class Main {
                 default:
                     System.out.println("\nOpção inválida. Tente novamente.");
             }
+            
         }
     }
+    
 
     private static void limparTela() {
         // Imprime 50 linhas em branco
@@ -166,7 +169,6 @@ public class Main {
         String email = scanner.nextLine();
 
         Adotante adotante = new Adotante(nomeAdotante, cpf, telefone, email);
-        Adocao adocao = new Adocao(adotante, animal);
 
         if (abrigo.removerAnimal(animal)) {
             System.out.println("\nAnimal adotado com sucesso!!");
